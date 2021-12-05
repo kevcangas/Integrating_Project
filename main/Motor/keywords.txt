@@ -1,0 +1,6 @@
+Motor   KEYWORD1
+contraer    KEYWORD2
+desplegar   KEYWORD2
+m_dirPin   KEYWORD2
+m_stepPin   KEYWORD2
+m_steps   KEYWORD2
