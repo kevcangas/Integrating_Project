@@ -1,0 +1,2 @@
+detectaFlanco   KEYWORD1
+detectar    KEYWORD2
