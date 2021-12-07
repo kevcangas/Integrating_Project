@@ -43,6 +43,7 @@ void loop() {
     lcd.print("Desplegando...");
     controlM = 1;
     Motores.desplegar(250);
+    while(digitalRead(13) == 1);
     lcd.clear();
   }
   
@@ -52,6 +53,7 @@ void loop() {
     lcd.print("Contrayendo...");
     controlM = 0;
     Motores.contraer(250);
+    while(digitalRead(13) == 1);
     lcd.clear();
   }
 
