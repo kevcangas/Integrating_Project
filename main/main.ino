@@ -2,6 +2,9 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <NewPing.h>
+#include <ESP8266.h>
+#include <wifiSimp.h>
+#include <SoftwareSerial.h>
 
 #define TRIGGER_PIN 12
 #define ECHO_PIN 11
@@ -11,6 +14,16 @@
 Motor Motores(2,3,200);
 LiquidCrystal_I2C lcd(0x3F,16,2);
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+
+
+//Char para internet
+const char* SSID = "myssid";
+const char* PASSWORD = "mypasword";
+
+SoftwareSerial softSerial(2, 3); // RX, TX
+ESP8266 wifi(softSerial);
+
+wifiSimp server;
 
 //Variable PROVISIONAL para el código
 bool controlM = 0;

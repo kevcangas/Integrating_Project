@@ -5,7 +5,7 @@
 
 class detectaFlanco{
     public:
-        detectaFlanco();
+        detectaFlanco(void){;}
         short detectar(short pin);
         
 };
