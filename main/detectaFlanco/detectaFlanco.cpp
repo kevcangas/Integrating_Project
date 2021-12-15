@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include "detectaFlanco.h"
 
-//detectaFlanco::detectaFlanco(){;}
+//detectaFlanco::detectaFlanco(void);
 
 short detectaFlanco::detectar(short pin) {
     //Devuelve 1 flanco ascendente, -1 flanco descendente y 0 si no hay nada
