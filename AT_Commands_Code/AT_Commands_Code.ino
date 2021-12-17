@@ -4,8 +4,8 @@ SoftwareSerial D1(2,3);
 
 void setup() {
   // put your setup code here, to run once:
-  D1.begin(115200);
-  Serial.begin(115200);
+  D1.begin(9600);
+  Serial.begin(9600);
 
 //  D1.println("AT+CWMODE=1");
 //  delay(1000);
@@ -26,11 +26,11 @@ void loop() {
     if(D1.find("+IPD,"))
     {
       int conexion = D1.read()-48;
-      if(D1.find("tanque"))
+      if(D1.find("tanque "))
       {
         int lectura = D1.read()-48;
 
-        String pagina ="HOLA MUNDO!"; //"<!doctype html><html><head></head><body>";
+        String pagina="HOLA MUNDO!"; //"<!doctype html><html><head></head><body>";
         if (lectura==1)
         {
           pagina+="ESTA PRENDIDO!";//"<h1>LED=Encendido!</h1></body></html>";
@@ -39,7 +39,7 @@ void loop() {
         {
           pagina+="NO JALO );";//"<h1>LED=Apagado ):</h1></body></html>";
         }
-
+        else pagina+=lectura;
         String enviar="AT+CIPSEND=";
         enviar+=conexion;
         enviar+=",";
@@ -57,6 +57,7 @@ void loop() {
       }  
     }
   }
+  
   //if (Serial.available())
     //D1.write(Serial.read());
 
