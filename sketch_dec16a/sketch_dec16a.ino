@@ -70,11 +70,11 @@ void loop(void)
       Serial.print("\r\n");
 
       wifiWrite("HTTP/1.1 200 OK\r\nnContent-Type: /html\r\nConnection: close\r\n\r\n");
-      wifiWrite("<html>\n<head>\n<title>Luis Llamas</title>\n</head>\n<body>");
-      wifiWrite("<h2>Salidas digitales</h2>");
-      wifiWrite("<button onClick=location.href='./?data=0'>ON</button>");
-      wifiWrite("<button onClick=location.href='./?data=1'>OFF</button>");
-      wifiWrite("</body></html>");
+      wifiWrite("<html><head><title>Rainwater Collector</title></head><body><h2>Deploy/Contract</h2><button onClick=location.href='./?data=0'>OFF</button><button onClick=location.href='./?data=1'>ON</button><h2>Tank capacity with water</h2><strong>82%</strong></body></html>");
+//      wifiWrite("<h2>Salidas digitales</h2>");
+//      wifiWrite("<button onClick=location.href='./?data=0'>ON</button>");
+//      wifiWrite("<button onClick=location.href='./?data=1'>OFF</button>");
+//      wifiWrite("</body></html>");
 
       Serial.println("Send finish");
 
