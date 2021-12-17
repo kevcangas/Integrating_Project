@@ -4,8 +4,8 @@ SoftwareSerial D1(2,3);
 
 void setup() {
   // put your setup code here, to run once:
-  D1.begin(115200);
-  Serial.begin(115200);
+  D1.begin(9600);
+  Serial.begin(9600);
 
 //  D1.println("AT+CWMODE=1");
 //  delay(1000);
