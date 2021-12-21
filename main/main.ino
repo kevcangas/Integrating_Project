@@ -48,7 +48,7 @@ void setup() {
 }
 
 void loop() {
-
+  String EdoMot;  
 //Activación de motores
   if(controlM == 0 and digitalRead(13) == 1){
     lcd.clear();

@@ -38,7 +38,7 @@ void loop() {
 //      else {
 //        pagina+="Sigo en la pagina principal";
 //      }
-      pagina="<html><head><title>Rainwater Collector</title></head><body><h2>Deploy/Contract</h2><button onClick=location.href='./?data=0'>ON</button><button onClick=location.href='./?data=1'>OFF</button><h2>Tank capacity with water</h2><strong>82%</strong></body></html>"; //"<!doctype html><html><head></head><body>";
+      pagina="<html><head><meta http-equiv=\"refresh\" content=\"5\"><title>Rainwater Collector</title></head><body><h2>Deploy/Contract</h2><button onClick=location.href='./?data=0'>ON</button><button onClick=location.href='./?data=1'>OFF</button><h2>Tank capacity with water</h2><strong>82%</strong></body></html>"; //"<!doctype html><html><head></head><body>";
       String enviar="AT+CIPSEND=";
       enviar+=conexion;
       enviar+=",";
